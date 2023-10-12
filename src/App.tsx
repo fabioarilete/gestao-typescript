@@ -1,19 +1,23 @@
 import * as C from './App.styles';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navbar } from './components/Navbar/Navbar';
+import { Home } from './pages/Home/Home';
+import { Cadastro } from './pages/Cadastro/Cadastro';
+import { Footer } from './components/Footer';
+import { CadastroMateriais } from './pages/CadastroMateriais';
 
 const App = () => {
   return (
     <Router>
-      <C.Navbar />
+      <Navbar />
       <C.Container>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/custos" element={<Custos />} />
-          <Route path="/cadastros" element={<Cadastros />} />
-          <Route path="/materiais" element={<Materiais />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/materiais" element={<CadastroMateriais />} />
         </Routes>
       </C.Container>
-      <C.Footer />
+      <Footer />
     </Router>
   );
 };
