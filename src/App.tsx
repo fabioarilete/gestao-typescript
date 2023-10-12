@@ -7,7 +7,10 @@ const App = () => {
       <C.Navbar />
       <C.Container>
         <Routes>
-          <C.Body>hello World!</C.Body>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/custos" element={<Custos />} />
+          <Route path="/cadastros" element={<Cadastros />} />
+          <Route path="/materiais" element={<Materiais />} />
         </Routes>
       </C.Container>
       <C.Footer />
