@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4em;
 `;
 
 export const H1 = styled.h1`

@@ -1,9 +1,10 @@
 import * as S from './style';
+import { FunctionComponent, ReactNode, ButtonHTMLAttributes } from 'react';
 
-export const SubmitButton = (text: string) => {
-  return (
-    <>
-      <S.Button>{text}</S.Button>
-    </>
-  );
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+}
+
+export const SubmitButton: FunctionComponent<ButtonProps> = ({ children }) => {
+  return <S.Button>{children}</S.Button>;
 };
