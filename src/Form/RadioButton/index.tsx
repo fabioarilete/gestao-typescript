@@ -9,11 +9,10 @@ export const RadioButton = forwardRef<HTMLInputElement, InputProps>(
   ({ type = 'radio', name = '', label = '', ...props }, ref) => {
     return (
       <>
-        <S.Label htmlFor={name}>{label}</S.Label>
-        <>
-          <S.Input type={type} name={name} ref={ref} {...props} />
-          <S.Input type={type} name={name} ref={ref} {...props} />
-        </>
+        <S.Label>
+          <S.Input type={type} name={name} {...props} />
+          {label}
+        </S.Label>
       </>
     );
   },

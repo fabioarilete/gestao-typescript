@@ -9,7 +9,7 @@ export const Container = styled.div`
   padding: 4em;
 `;
 
-export const FormMateriais = styled.form`
+export const FormOperacoes = styled.form`
   width: 550px;
   margin: -40px;
   display: flex;

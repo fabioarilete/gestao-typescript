@@ -2,25 +2,37 @@
   "produtos": [],
   "materiaPrima": [
     {
-      "preco": 50,
-      "name": "xuxu beleza",
-      "icms": 18,
-      "ipi": 5,
-      "frete": 10,
-      "nf": 100,
-      "id": 1
-    },
-    {
       "preco": 5.5,
       "name": "PP PRETO - GRANULADO",
       "icms": 18,
       "ipi": 5,
       "frete": 5,
       "nf": 100,
+      "unid": "KG",
+      "tipoFornecedor": "0",
+      "id": 1
+    },
+    {
+      "preco": 50,
+      "name": "PP PRETO - GRANULADO",
+      "icms": 18,
+      "ipi": 5,
+      "frete": 5,
+      "nf": 100,
+      "unid": "KG",
+      "tipoFornecedor": "0",
+      "total": 43.5,
       "id": 2
     }
   ],
-  "listaOperacoes": [],
+  "listaOperacoes": [
+    {
+      "valor": 120,
+      "name": "INJETORA",
+      "unid": "HR",
+      "id": 1
+    }
+  ],
   "unidades": [],
   "embalagens": [],
   "markUps": []

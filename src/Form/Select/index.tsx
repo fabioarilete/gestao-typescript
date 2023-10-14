@@ -12,8 +12,9 @@ export const Select: FC<InputProps> = ({ name, label, ...rest }) => {
       <S.Select {...rest} name={name}>
         <option>Selecione uma opção</option>
         <option>UN</option>
-        <option>PCT</option>
         <option>KG</option>
+        <option>PCT</option>
+        <option>HR</option>
         <option>LT</option>
         <option>FD</option>
         <option>FX</option>

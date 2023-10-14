@@ -5,6 +5,7 @@ import { Home } from './pages/Home/Home';
 import { Cadastro } from './pages/Cadastro/Cadastro';
 import { Footer } from './components/Footer';
 import { CadastroMateriais } from './pages/CadastroMateriais';
+import { CadastroOperacoes } from './pages/CadastroOperacoes';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/materiais" element={<CadastroMateriais />} />
+          <Route path="/operacoes" element={<CadastroOperacoes />} />
         </Routes>
       </C.Container>
       <Footer />

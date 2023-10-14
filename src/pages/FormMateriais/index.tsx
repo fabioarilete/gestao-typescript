@@ -14,6 +14,7 @@ interface FormState {
   frete: number;
   nf: number;
   unid: string;
+  tipoFornecedor: string;
 }
 
 export const FormMateriais = () => {
@@ -25,13 +26,16 @@ export const FormMateriais = () => {
     frete: '' as any,
     nf: '' as any,
     unid: '',
+    tipoFornecedor: '' as any,
   });
   const navigate = useNavigate();
 
   const totalMaterial = useMemo(() => {
     const valorFrete = material.preco * (material.frete / 100);
     const valorIcms = material.preco * (material.icms / 100);
+    return material.preco - valorIcms + valorFrete;
   }, [material]);
+  console.log(material.preco * (material.frete / 100));
 
   function createPost() {
     fetch('http://localhost:5000/materiaPrima', {
@@ -52,9 +56,9 @@ export const FormMateriais = () => {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const { name, preco, icms, ipi, frete, nf } = material;
+    const { name, preco, icms, ipi, frete, nf, tipoFornecedor } = material;
 
-    if (!name || !preco || !icms || !ipi || !frete || !nf) {
+    if (!name || !preco || !icms || !ipi || !frete || !nf || !tipoFornecedor) {
       window.alert('Preencha todos os campos!');
       return;
     }
@@ -77,7 +81,7 @@ export const FormMateriais = () => {
           onChange={event =>
             setMaterial({
               ...material,
-              name: event.currentTarget.value,
+              name: event.currentTarget.value.toUpperCase(),
             })
           }
         />
@@ -168,7 +172,32 @@ export const FormMateriais = () => {
             })
           }
         />
-        <RadioButton name="sim" label="Empresa" />
+        <S.Label>Tipo de Fornecedor</S.Label>
+        <S.ContainerRadio>
+          <RadioButton
+            name="tipoFornecedor"
+            label="Simples"
+            value={1}
+            onChange={event =>
+              setMaterial({
+                ...material,
+                tipoFornecedor: event.target.value,
+              })
+            }
+          />
+          <RadioButton
+            name="tipoFornecedor"
+            label="Presumido"
+            value={0}
+            onChange={event =>
+              setMaterial({
+                ...material,
+                tipoFornecedor: event.target.value,
+              })
+            }
+          />
+        </S.ContainerRadio>
+
         <SubmitButton type="submit">Cadastrar Material</SubmitButton>
       </S.FormMateriais>
     </S.Container>
