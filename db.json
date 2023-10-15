@@ -23,6 +23,18 @@
       "tipoFornecedor": "0",
       "total": 43.5,
       "id": 2
+    },
+    {
+      "preco": 1.5,
+      "name": "CABO PLASTIFICADO 1,2M",
+      "icms": 18,
+      "ipi": 5,
+      "frete": 5,
+      "nf": 100,
+      "unid": "UN",
+      "tipoFornecedor": "0",
+      "total": 1.305,
+      "id": 3
     }
   ],
   "listaOperacoes": [
@@ -31,9 +43,46 @@
       "name": "INJETORA",
       "unid": "HR",
       "id": 1
+    },
+    {
+      "valor": 50,
+      "name": "MONTAGEM",
+      "unid": "HR",
+      "id": 2
+    },
+    {
+      "valor": 50,
+      "name": "EMBALAGEM",
+      "unid": "HR",
+      "id": 3
     }
   ],
-  "unidades": [],
-  "embalagens": [],
-  "markUps": []
+  "markUps": [
+    {
+      "name": "SEM SUBSTITUIÇÃO TRIBUTÁRIA",
+      "impostos": 13,
+      "adm": 6,
+      "comissao": 8.7,
+      "frete": 8,
+      "financeiro": 4,
+      "marketing": 2,
+      "promotores": 2,
+      "bonificacoes": 2,
+      "lucro": 15,
+      "id": 1
+    },
+    {
+      "name": "COM SUBSTITUIÇÃO TRIBUTÁRIA",
+      "impostos": 6,
+      "adm": 6,
+      "comissao": 8.7,
+      "frete": 8,
+      "financeiro": 4,
+      "marketing": 2,
+      "promotores": 2,
+      "bonificacoes": 2,
+      "lucro": 15,
+      "id": 2
+    }
+  ]
 }

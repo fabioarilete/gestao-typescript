@@ -1,10 +1,9 @@
 import * as S from './style';
 import { Input } from '../../Form/Input';
 import { SubmitButton } from '../../Form/SubmitButton';
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Select } from '../../Form/Select';
-import { RadioButton } from '../../Form/RadioButton';
 
 interface FormState {
   valor: number;
@@ -30,8 +29,8 @@ export const FormOperacoes = () => {
     })
       .then(res => res.json())
       .then(data => {
-        navigate('/operacoes', {
-          state: { message: 'Material cadastrado com sucesso!' },
+        navigate('/listaOperacoes', {
+          state: { message: 'Operação cadastrada com sucesso!' },
         });
       })
       .catch(e => console.log(e));

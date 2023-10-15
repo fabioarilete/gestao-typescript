@@ -6,6 +6,7 @@ import { Cadastro } from './pages/Cadastro/Cadastro';
 import { Footer } from './components/Footer';
 import { CadastroMateriais } from './pages/CadastroMateriais';
 import { CadastroOperacoes } from './pages/CadastroOperacoes';
+import { CadastroMarkUps } from './pages/CadastroMarkUps';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/materiais" element={<CadastroMateriais />} />
           <Route path="/operacoes" element={<CadastroOperacoes />} />
+          <Route path="/markUps" element={<CadastroMarkUps />} />
         </Routes>
       </C.Container>
       <Footer />

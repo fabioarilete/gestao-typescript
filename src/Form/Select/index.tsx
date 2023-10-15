@@ -1,5 +1,5 @@
 import * as S from './style';
-import { InputHTMLAttributes, ReactNode, FC } from 'react';
+import { InputHTMLAttributes, FC } from 'react';
 
 type InputProps = InputHTMLAttributes<HTMLSelectElement> & {
   label?: string;
