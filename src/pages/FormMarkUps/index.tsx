@@ -33,13 +33,30 @@ export const FormMarkUps = () => {
 
   const navigate = useNavigate();
 
+  const coeficiente = useMemo(() => {
+    const encargos =
+      markUp.impostos +
+      markUp.adm +
+      markUp.comissao +
+      markUp.frete +
+      markUp.financeiro +
+      markUp.marketing +
+      markUp.promotores +
+      markUp.bonificacoes +
+      markUp.lucro;
+
+    const coef = 100 / (100 - encargos);
+
+    return parseFloat(coef.toFixed(2));
+  }, [markUp]);
+
   function createPost() {
     fetch('http://localhost:5000/markUps', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ ...markUp }),
+      body: JSON.stringify({ ...markUp, coeficiente }),
     })
       .then(res => res.json())
       .then(data => {

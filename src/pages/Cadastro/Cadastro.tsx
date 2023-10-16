@@ -7,18 +7,18 @@ export const Cadastro = () => {
       <S.Container>
         <S.Title>Cadastrar</S.Title>
         <S.ItensCadastro>
-          <LinkButton href="/materiais" text="Materiais" />
-          <LinkButton href="/operacoes" text="Operações" />
-          <LinkButton href="/markUps" text="Mark Up" />
+          <LinkButton to="/materiais" text="Materiais" />
+          <LinkButton to="/operacoes" text="Operações" />
+          <LinkButton to="/markUps" text="Mark Up" />
         </S.ItensCadastro>
       </S.Container>
 
       <S.Container>
         <S.Title>Editar</S.Title>
         <S.ItensEdicao>
-          <LinkButton href="/listaMateriais" text="Materiais" />
-          <LinkButton href="/listaOperacoes" text="Operações" />
-          <LinkButton href="/listaMarkUps" text="Mark Up" />
+          <LinkButton to="/materiaPrima" text="Materiais" />
+          <LinkButton to="/listaOperacoes" text="Operações" />
+          <LinkButton to="/listaMarkUps" text="Mark Up" />
         </S.ItensEdicao>
       </S.Container>
     </>

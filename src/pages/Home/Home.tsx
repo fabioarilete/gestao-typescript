@@ -9,7 +9,7 @@ export const Home = () => {
         Bem-vindo ao <S.Span>Custos</S.Span>
       </S.H1>
       <S.P>Comece agora a gerir seus custos</S.P>
-      <LinkButton href="novocusto" text="Criar Novo Custo" />
+      <LinkButton to="novocusto" text="Criar Novo Custo" />
       <S.Img src={imagem} />
     </S.Container>
   );

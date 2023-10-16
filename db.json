@@ -2,21 +2,9 @@
   "produtos": [],
   "materiaPrima": [
     {
-      "preco": 5.5,
-      "name": "PP PRETO - GRANULADO",
-      "icms": 18,
-      "ipi": 5,
-      "frete": 5,
-      "nf": 100,
-      "unid": "KG",
-      "tipoFornecedor": "0",
-      "id": 1
-    },
-    {
       "preco": 50,
       "name": "PP PRETO - GRANULADO",
       "icms": 18,
-      "ipi": 5,
       "frete": 5,
       "nf": 100,
       "unid": "KG",
@@ -28,13 +16,45 @@
       "preco": 1.5,
       "name": "CABO PLASTIFICADO 1,2M",
       "icms": 18,
-      "ipi": 5,
       "frete": 5,
       "nf": 100,
       "unid": "UN",
       "tipoFornecedor": "0",
       "total": 1.305,
       "id": 3
+    },
+    {
+      "preco": 9,
+      "name": "NYLON PET - FITA",
+      "icms": 18,
+      "frete": 5,
+      "nf": 100,
+      "unid": "KG",
+      "tipoFornecedor": "1",
+      "total": 7.83,
+      "id": 4
+    },
+    {
+      "preco": 7.4,
+      "name": "PP BRANCO - GRANULADO",
+      "icms": 18,
+      "frete": 5,
+      "nf": 100,
+      "unid": "KG",
+      "tipoFornecedor": "0",
+      "total": 6.438000000000001,
+      "id": 5
+    },
+    {
+      "preco": 50,
+      "name": "COURO",
+      "icms": 18,
+      "frete": 10,
+      "nf": 100,
+      "unid": "KG",
+      "tipoFornecedor": "0",
+      "total": 46,
+      "id": 6
     }
   ],
   "listaOperacoes": [
@@ -69,20 +89,8 @@
       "promotores": 2,
       "bonificacoes": 2,
       "lucro": 15,
+      "coeficiente": 2.54,
       "id": 1
-    },
-    {
-      "name": "COM SUBSTITUIÇÃO TRIBUTÁRIA",
-      "impostos": 6,
-      "adm": 6,
-      "comissao": 8.7,
-      "frete": 8,
-      "financeiro": 4,
-      "marketing": 2,
-      "promotores": 2,
-      "bonificacoes": 2,
-      "lucro": 15,
-      "id": 2
     }
   ]
 }

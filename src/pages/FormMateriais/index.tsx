@@ -10,7 +10,6 @@ interface FormState {
   preco: number;
   name: string;
   icms: number;
-  ipi: number;
   frete: number;
   nf: number;
   unid: string;
@@ -22,7 +21,6 @@ export const FormMateriais = () => {
     preco: '' as any,
     name: '',
     icms: '' as any,
-    ipi: '' as any,
     frete: '' as any,
     nf: '' as any,
     unid: '',
@@ -56,16 +54,14 @@ export const FormMateriais = () => {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const { name, preco, icms, ipi, frete, nf, tipoFornecedor } = material;
+    const { name, preco, icms, frete, nf, tipoFornecedor } = material;
 
-    if (!name || !preco || !icms || !ipi || !frete || !nf || !tipoFornecedor) {
+    if (!name || !preco || !icms || !frete || !nf || !tipoFornecedor) {
       window.alert('Preencha todos os campos!');
       return;
     }
 
     createPost();
-
-    window.alert('Sucesso!');
   }
 
   return (
@@ -158,20 +154,6 @@ export const FormMateriais = () => {
           }
         />
 
-        <Input
-          step={0.01}
-          type="number"
-          label="Aliquota de IPI"
-          name="ipi"
-          placeholder="Informe o % de IPI"
-          value={material.ipi}
-          onChange={event =>
-            setMaterial({
-              ...material,
-              ipi: parseFloat(event.target.value),
-            })
-          }
-        />
         <S.Label>Tipo de Fornecedor</S.Label>
         <S.ContainerRadio>
           <RadioButton

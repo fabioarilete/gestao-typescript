@@ -1,5 +1,15 @@
-import * as S from './style';
+import { Link } from 'react-router-dom';
+import './style.css';
 
-export const LinkButton = (props: any) => {
-  return <S.LinkButton href={props.href}>{props.text}</S.LinkButton>;
+type Props = {
+  to: string;
+  text: string;
+};
+
+export const LinkButton = ({ to = '', text = '' }: Props) => {
+  return (
+    <Link className="btn" to={to}>
+      {text}
+    </Link>
+  );
 };
