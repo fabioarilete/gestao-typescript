@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-  background-color: black;
+  background-color: rgb(64, 62, 62);
   color: #fff;
-  padding: 3em;
+  padding: 1em;
   text-align: center;
 `;
 
@@ -22,9 +22,9 @@ export const Li = styled.li`
 
 export const Link = styled.a`
   font-size: 1.5em;
-  color: #fff;
+  color: #ffbb33;
   &:hover {
-    color: #ffbb33;
+    color: #ec17a8;
   }
 `;
 

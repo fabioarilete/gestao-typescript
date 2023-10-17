@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { CardMateriais } from '../CardMateriais';
 import { Message } from '../../components/Message';
 import Loading from '../../components/Loading';
+import { Button } from '@mui/material';
 
 export const Materiais = () => {
   const [materiais, setMateriais] = useState<any[]>([]);
@@ -64,6 +65,10 @@ export const Materiais = () => {
             name={material.name}
             preco={material.preco.toFixed(2)}
             unid={material.unid}
+            frete={material.frete.toFixed(0)}
+            nf={material.nf.toFixed(0)}
+            icms={material.icms.toFixed(0)}
+            tipoFornecedor={material.tipoFornecedor}
             total={material.total.toFixed(2)}
             key={material.id}
           />

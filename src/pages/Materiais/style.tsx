@@ -12,8 +12,8 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  background-color: black;
-  color: #ffbb33;
+  color: #fff;
+  font-size: 45px;
   padding: 5px;
 `;
 

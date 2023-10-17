@@ -44,17 +44,6 @@
       "tipoFornecedor": "0",
       "total": 6.438000000000001,
       "id": 5
-    },
-    {
-      "preco": 50,
-      "name": "COURO",
-      "icms": 18,
-      "frete": 10,
-      "nf": 100,
-      "unid": "KG",
-      "tipoFornecedor": "0",
-      "total": 46,
-      "id": 6
     }
   ],
   "listaOperacoes": [

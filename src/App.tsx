@@ -8,14 +8,15 @@ import { CadastroMateriais } from './pages/CadastroMateriais';
 import { CadastroOperacoes } from './pages/CadastroOperacoes';
 import { CadastroMarkUps } from './pages/CadastroMarkUps';
 import { Materiais } from './pages/Materiais';
-import { SideBar } from './components/SideBar';
+import SideBar from './components/SideBar';
+import { Box } from '@mui/material';
 
 const App = () => {
   return (
     <Router>
-      {/* <SideBar /> */}
-      <Navbar />
-      <C.Container>
+      <SideBar />
+      {/* <Navbar /> */}
+      <Box>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cadastro" element={<Cadastro />} />
@@ -24,7 +25,8 @@ const App = () => {
           <Route path="/markUps" element={<CadastroMarkUps />} />
           <Route path="/materiaPrima" element={<Materiais />} />
         </Routes>
-      </C.Container>
+      </Box>
+
       <Footer />
     </Router>
   );

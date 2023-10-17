@@ -1,36 +1,72 @@
 import styled from 'styled-components';
 
-export const ContainerCard = styled.div`
+export const Box = styled.div`
+  width: 1000px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContainerList = styled.div`
   padding: 1em;
-  border: 1px solid #7a7a7a;
   border-radius: 5px;
-  width: 24%;
+  box-shadow: 1px 1px 2px grey;
+  width: 100%;
   margin: 0.5%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
 `;
 
-export const Title = styled.h4`
-  background-color: black;
-  color: #ffbb33;
-  padding: 0.4em;
-  margin-bottom: 1.3em;
-  font-size: 1.3em;
+export const ContainerTitle = styled.div`
+  width: 100%;
+  display: flex;
 `;
 
-export const P = styled.p`
-  color: #7a7a7a;
-  margin-bottom: 1em;
-`;
-
-export const Span = styled.span`
-  color: #7a7a7a;
-  margin-bottom: 1em;
-  font-weight: bold;
+export const ContainerInfo = styled.div`
+  width: 100%;
+  display: flex;
 `;
 
 export const ContainerActions = styled.div`
-  margin-top: 1.2em;
+  width: 25%;
   display: flex;
+  justify-content: end;
+`;
+
+export const Container10 = styled.div`
+  width: 10%;
+  display: block;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+`;
+
+export const Container20 = styled.div`
+  width: 20%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
+export const Title = styled.h3`
+  height: 30px;
+  width: 75%;
+  margin: 0;
+  padding: 0;
+  background: #08a67c;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px grey;
+`;
+
+export const Span = styled.span``;
+
+export const P = styled.p`
+  font-weight: bold;
 `;
 
 export const ButtonRemove = styled.button`

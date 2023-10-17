@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import './style.css';
+import { Box, Button } from '@mui/material';
 
 type Props = {
   to: string;
@@ -8,8 +8,10 @@ type Props = {
 
 export const LinkButton = ({ to = '', text = '' }: Props) => {
   return (
-    <Link className="btn" to={to}>
-      {text}
-    </Link>
+    <Box className="btn">
+      <Button component="a" href={to}>
+        {text}
+      </Button>
+    </Box>
   );
 };

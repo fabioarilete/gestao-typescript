@@ -15,6 +15,9 @@ code {
 html,
 body,
 #root {
-  background-color: #d7d3d3;
+  background-color: #08a67c;
   height: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
