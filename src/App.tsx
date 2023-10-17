@@ -10,6 +10,7 @@ import { CadastroMarkUps } from './pages/CadastroMarkUps';
 import { Materiais } from './pages/Materiais';
 import SideBar from './components/SideBar';
 import { Box } from '@mui/material';
+import { Operacoes } from './pages/Operacoes';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/operacoes" element={<CadastroOperacoes />} />
           <Route path="/markUps" element={<CadastroMarkUps />} />
           <Route path="/materiaPrima" element={<Materiais />} />
+          <Route path="/listaOperacoes" element={<Operacoes />} />
         </Routes>
       </Box>
 

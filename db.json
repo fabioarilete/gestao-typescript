@@ -24,17 +24,6 @@
       "id": 3
     },
     {
-      "preco": 9,
-      "name": "NYLON PET - FITA",
-      "icms": 18,
-      "frete": 5,
-      "nf": 100,
-      "unid": "KG",
-      "tipoFornecedor": "1",
-      "total": 7.83,
-      "id": 4
-    },
-    {
       "preco": 7.4,
       "name": "PP BRANCO - GRANULADO",
       "icms": 18,
@@ -58,12 +47,6 @@
       "name": "MONTAGEM",
       "unid": "HR",
       "id": 2
-    },
-    {
-      "valor": 50,
-      "name": "EMBALAGEM",
-      "unid": "HR",
-      "id": 3
     }
   ],
   "markUps": [
