@@ -62,7 +62,7 @@ export const Operacoes = () => {
             handleRemove={handleRemove}
             id={operacao.id}
             name={operacao.name}
-            valor={operacao.valor.toFixed(2)}
+            valor={operacao.valor}
             unid={operacao.unid}
             key={operacao.id}
           />

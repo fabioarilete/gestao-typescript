@@ -63,13 +63,13 @@ export const Materiais = () => {
             handleRemove={handleRemove}
             id={material.id}
             name={material.name}
-            preco={material.preco.toFixed(2)}
+            preco={material.preco}
             unid={material.unid}
             frete={material.frete.toFixed(0)}
             nf={material.nf.toFixed(0)}
             icms={material.icms.toFixed(0)}
             tipoFornecedor={material.tipoFornecedor}
-            total={material.total.toFixed(2)}
+            total={material.total}
             key={material.id}
           />
         ))}

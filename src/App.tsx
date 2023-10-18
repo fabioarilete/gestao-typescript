@@ -10,6 +10,7 @@ import { Operacoes } from './pages/Operacoes';
 import Container from './components/Container';
 import SideBar from './components/SideBar';
 import { Material } from './pages/Material';
+import { Operacao } from './pages/Operacao';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/materiaPrima" element={<Materiais />} />
           <Route path="/materiaPrima/:id" element={<Material />} />
           <Route path="/listaOperacoes" element={<Operacoes />} />
+          <Route path="/listaOperacoes/:id" element={<Operacao />} />
         </Routes>
       </Container>
       <Footer />

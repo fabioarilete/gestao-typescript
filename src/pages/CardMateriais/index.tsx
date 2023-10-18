@@ -1,3 +1,4 @@
+import formatCurrency from '../../utils/formatCurrency';
 import * as S from './style';
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs';
 
@@ -49,7 +50,7 @@ export const CardMateriais = ({
           <S.Container20>
             <S.Span>Preço inicial:</S.Span>
             <S.P>
-              {preco} {unid}
+              {formatCurrency(preco, 'BRL')} {unid}
             </S.P>
           </S.Container20>
 
@@ -70,13 +71,13 @@ export const CardMateriais = ({
 
           <S.Container10>
             <S.Span>Fornecedor:</S.Span>
-            <S.P>{tipoFornecedor}</S.P>
+            <S.P>{tipoFornecedor === '1' ? 'Simples' : 'Presumido'}</S.P>
           </S.Container10>
 
           <S.Container20>
             <S.Span>Preço final:</S.Span>
             <S.P>
-              {total} {unid}
+              {formatCurrency(total, 'BRL')} {unid}
             </S.P>
           </S.Container20>
         </S.ContainerInfo>

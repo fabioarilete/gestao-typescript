@@ -1,58 +1,25 @@
 import * as S from './style';
 import { Input } from '../../Form/Input';
 import { SubmitButton } from '../../Form/SubmitButton';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { Dispatch, SetStateAction } from 'react';
 import { Select } from '../../Form/Select';
+import { OperacaoTypes } from '../Operacao/types/OperacaoTypes';
 
-interface FormState {
-  valor: number;
-  name: string;
-  unid: string;
+interface FormOperacoesProps {
+  operacao: OperacaoTypes;
+  setOperacao: Dispatch<SetStateAction<OperacaoTypes>>;
+  handleSubmit(operacao: OperacaoTypes): void;
 }
 
-export const FormOperacoes = () => {
-  const [operacao, setOperacao] = useState<FormState>({
-    valor: '' as any,
-    name: '',
-    unid: '',
-  });
-  const navigate = useNavigate();
-
-  function createPost() {
-    fetch('http://localhost:5000/listaOperacoes', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ ...operacao }),
-    })
-      .then(res => res.json())
-      .then(data => {
-        navigate('/listaOperacoes', {
-          state: { message: 'Operação cadastrada com sucesso!' },
-        });
-      })
-      .catch(e => console.log(e));
-  }
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+export const FormOperacoes = ({ operacao, setOperacao, handleSubmit }: FormOperacoesProps) => {
+  function _handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const { name, valor, unid } = operacao;
-
-    if (!name || !valor || !unid) {
-      window.alert('Preencha todos os campos!');
-      return;
-    }
-
-    createPost();
-
-    window.alert('Sucesso!');
+    handleSubmit({ ...operacao });
   }
 
   return (
     <S.Container>
-      <S.FormOperacoes onSubmit={handleSubmit}>
+      <S.FormOperacoes onSubmit={_handleSubmit}>
         <S.Title>Cadastro de Operações</S.Title>
 
         <Input

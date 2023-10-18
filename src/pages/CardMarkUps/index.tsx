@@ -3,21 +3,43 @@ import { BsPencil, BsFillTrashFill } from 'react-icons/bs';
 import formatCurrency from '../../utils/formatCurrency';
 
 type Props = {
-  id: string;
   name: string;
-  valor: number;
-  unid: string;
+  impostos: number;
+  comissao: number;
+  adm: number;
+  frete: number;
+  financeiro: number;
+  marketing: number;
+  promotores: number;
+  bonificacoes: number;
+  lucro: number;
+  coeficiente: number;
+  id: number;
   handleRemove(id: string): void;
 };
 
-export const CardOperacoes = ({ id, name, valor, unid, handleRemove }: Props) => {
+export const CardMarkUps = ({
+  id,
+  name,
+  impostos,
+  comissao,
+  adm,
+  frete,
+  financeiro,
+  marketing,
+  promotores,
+  bonificacoes,
+  lucro,
+  coeficiente,
+  handleRemove,
+}: Props) => {
   function handleRemoveClick() {
     handleRemove(id);
   }
 
   return (
     <S.Box>
-      <S.ContainerOperacao>
+      <S.ContainerMarkUp>
         <S.ContainerTitle>
           <S.Title>{name}</S.Title>
         </S.ContainerTitle>
@@ -38,7 +60,7 @@ export const CardOperacoes = ({ id, name, valor, unid, handleRemove }: Props) =>
             <BsFillTrashFill /> Excluir
           </S.ButtonRemove>
         </S.ContainerActions>
-      </S.ContainerOperacao>
+      </S.ContainerMarkUp>
     </S.Box>
   );
 };
