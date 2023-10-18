@@ -1,7 +1,5 @@
 import * as S from './style';
-import { Link } from 'react-router-dom';
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs';
-import { LinkButton } from '../../components/LinkButton';
 
 type Props = {
   id: string;
@@ -38,9 +36,9 @@ export const CardMateriais = ({
         <S.ContainerTitle>
           <S.Title>{name}</S.Title>
           <S.ContainerActions>
-            <Link to={`materiaPrima/${id}`}>
+            <S.ButtonEdit href={`materiaPrima/${id}`}>
               <BsPencil /> Editar
-            </Link>
+            </S.ButtonEdit>
 
             <S.ButtonRemove onClick={handleRemoveClick}>
               <BsFillTrashFill /> Excluir

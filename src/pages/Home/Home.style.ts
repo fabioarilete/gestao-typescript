@@ -6,7 +6,7 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4em;
+  min-height: 100vh;
 `;
 
 export const H1 = styled.h1`
@@ -16,14 +16,13 @@ export const H1 = styled.h1`
 `;
 
 export const P = styled.p`
-  margin-bottom: 1em;
   font-size: 1.3em;
   color: #000;
   font-weight: bold;
 `;
 
 export const Img = styled.img`
-  width: 650px;
+  width: 450px;
   margin: 2em 0;
 `;
 

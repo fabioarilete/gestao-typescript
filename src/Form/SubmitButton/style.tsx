@@ -5,9 +5,9 @@ export const Button = styled.button`
   height: 50px;
   border-radius: 5px;
   margin-top: 20px;
-  background-color: black;
+  background-color: #08a67c;
   color: #fff;
-  padding: 0.7em 1.2em;
+  padding: auto;
   text-decoration: none;
   transition: 0.5s;
   cursor: pointer;
@@ -17,7 +17,8 @@ export const Button = styled.button`
 
   &:hover {
     font-weight: bold;
-    color: black;
-    background-color: #ffbb33;
+    color: #08a67c;
+    background-color: #fff;
+    border: 2px solid #08a67c;
   }
 `;

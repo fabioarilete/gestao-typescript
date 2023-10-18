@@ -64,20 +64,45 @@ export const P = styled.p`
 export const ButtonRemove = styled.button`
   text-decoration: none;
   border: none;
-  background-color: #fff;
-  color: black;
+  background-color: red;
+  color: #fff;
   font-size: 0.9em;
-  padding: 0.6em 1em;
+  padding: 0.4em 0.8em;
   cursor: pointer;
   margin-right: 1em;
-  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.5s;
+  border-radius: 5px;
+  margin-left: 5px;
 
   &:hover {
-    background-color: black;
-    color: #ffbb33;
+    background-color: #fff;
+    color: red;
+    border: 2px solid red;
+  }
+`;
+
+export const ButtonEdit = styled.a`
+  text-decoration: none;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  border-radius: 5px;
+  margin-left: 10px;
+
+  &:hover {
+    background-color: #fff;
+    color: blue;
+    border: 2px solid blue;
   }
 `;

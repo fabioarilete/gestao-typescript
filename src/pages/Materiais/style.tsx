@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const ContainerMateriais = styled.div`
-  padding: 2em;
+  padding: 1em;
+  min-height: 100vh;
 `;
 
 export const TitleContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 2em;
 `;
 

@@ -2,14 +2,14 @@
   "produtos": [],
   "materiaPrima": [
     {
-      "preco": 50,
+      "preco": 55,
       "name": "PP PRETO - GRANULADO",
       "icms": 18,
       "frete": 5,
       "nf": 100,
       "unid": "KG",
       "tipoFornecedor": "0",
-      "total": 43.5,
+      "total": 47.85,
       "id": 2
     },
     {

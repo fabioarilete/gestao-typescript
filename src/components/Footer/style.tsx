@@ -22,9 +22,9 @@ export const Li = styled.li`
 
 export const Link = styled.a`
   font-size: 1.5em;
-  color: #ffbb33;
+  color: #fff;
   &:hover {
-    color: #ec17a8;
+    color: #ffbb33;
   }
 `;
 

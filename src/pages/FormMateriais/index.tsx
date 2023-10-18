@@ -1,33 +1,18 @@
 import * as S from './style';
 import { Input } from '../../Form/Input';
 import { SubmitButton } from '../../Form/SubmitButton';
-import React, { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { Dispatch, SetStateAction, useMemo } from 'react';
 import { Select } from '../../Form/Select';
 import { RadioButton } from '../../Form/RadioButton';
+import { MaterialTypes } from '../Material/types/MaterialTypes';
 
-interface FormState {
-  preco: number;
-  name: string;
-  icms: number;
-  frete: number;
-  nf: number;
-  unid: string;
-  tipoFornecedor: string;
+interface FormMateriaisProps {
+  material: MaterialTypes;
+  setMaterial: Dispatch<SetStateAction<MaterialTypes>>;
+  handleSubmit(material: MaterialTypes): void;
 }
 
-export const FormMateriais = () => {
-  const [material, setMaterial] = useState<FormState>({
-    preco: '' as any,
-    name: '',
-    icms: '' as any,
-    frete: '' as any,
-    nf: '' as any,
-    unid: '',
-    tipoFornecedor: '' as any,
-  });
-  const navigate = useNavigate();
-
+export const FormMateriais = ({ material, setMaterial, handleSubmit }: FormMateriaisProps) => {
   const totalMaterial = useMemo(() => {
     const valorFrete = material.preco * (material.frete / 100);
     const valorIcms = material.preco * (material.icms / 100);
@@ -35,38 +20,14 @@ export const FormMateriais = () => {
   }, [material]);
   console.log(material.preco * (material.frete / 100));
 
-  function createPost() {
-    fetch('http://localhost:5000/materiaPrima', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ ...material, total: totalMaterial }),
-    })
-      .then(res => res.json())
-      .then(data => {
-        navigate('/materiaPrima', {
-          state: { message: 'Material cadastrado com sucesso!' },
-        });
-      })
-      .catch(e => console.log(e));
-  }
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function _handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const { name, preco, icms, frete, nf, tipoFornecedor } = material;
-
-    if (!name || !preco || !icms || !frete || !nf || !tipoFornecedor) {
-      window.alert('Preencha todos os campos!');
-      return;
-    }
-
-    createPost();
+    handleSubmit({ ...material, total: totalMaterial });
   }
 
   return (
     <S.Container>
-      <S.FormMateriais onSubmit={handleSubmit}>
+      <S.FormMateriais onSubmit={_handleSubmit}>
         <S.Title>Cadastro de Materiais</S.Title>
         <Input
           type="text"

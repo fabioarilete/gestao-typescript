@@ -32,9 +32,9 @@ export const CardOperacoes = ({ id, name, valor, unid, handleRemove }: Props) =>
         </S.ContainerInfo>
         <S.ContainerActions>
           {' '}
-          <Link to={`listaOperacoes/${id}`}>
+          <S.ButtonEdit href={`listaOperacoes/${id}`}>
             <BsPencil /> Editar
-          </Link>
+          </S.ButtonEdit>
           <S.ButtonRemove onClick={handleRemoveClick}>
             <BsFillTrashFill /> Excluir
           </S.ButtonRemove>

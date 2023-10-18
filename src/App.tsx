@@ -1,6 +1,4 @@
-import * as C from './App.styles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar } from './components/Navbar/Navbar';
 import { Home } from './pages/Home/Home';
 import { Cadastro } from './pages/Cadastro/Cadastro';
 import { Footer } from './components/Footer';
@@ -8,16 +6,16 @@ import { CadastroMateriais } from './pages/CadastroMateriais';
 import { CadastroOperacoes } from './pages/CadastroOperacoes';
 import { CadastroMarkUps } from './pages/CadastroMarkUps';
 import { Materiais } from './pages/Materiais';
-import SideBar from './components/SideBar';
-import { Box } from '@mui/material';
 import { Operacoes } from './pages/Operacoes';
+import Container from './components/Container';
+import SideBar from './components/SideBar';
+import { Material } from './pages/Material';
 
 const App = () => {
   return (
     <Router>
       <SideBar />
-      {/* <Navbar /> */}
-      <Box>
+      <Container>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cadastro" element={<Cadastro />} />
@@ -25,10 +23,10 @@ const App = () => {
           <Route path="/operacoes" element={<CadastroOperacoes />} />
           <Route path="/markUps" element={<CadastroMarkUps />} />
           <Route path="/materiaPrima" element={<Materiais />} />
+          <Route path="/materiaPrima/:id" element={<Material />} />
           <Route path="/listaOperacoes" element={<Operacoes />} />
         </Routes>
-      </Box>
-
+      </Container>
       <Footer />
     </Router>
   );
