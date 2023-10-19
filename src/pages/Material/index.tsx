@@ -17,7 +17,7 @@ const inicialState: MaterialTypes = {
   nf: 0,
   tipoFornecedor: '',
   total: 0,
-  unid: ',',
+  unid: '',
 };
 
 export const Material = () => {

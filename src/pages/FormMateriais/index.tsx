@@ -18,7 +18,6 @@ export const FormMateriais = ({ material, setMaterial, handleSubmit }: FormMater
     const valorIcms = material.preco * (material.icms / 100);
     return material.preco - valorIcms + valorFrete;
   }, [material]);
-  console.log(material.preco * (material.frete / 100));
 
   function _handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

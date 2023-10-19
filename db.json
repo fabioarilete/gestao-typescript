@@ -33,6 +33,17 @@
       "tipoFornecedor": "0",
       "total": 6.438000000000001,
       "id": 5
+    },
+    {
+      "id": 6,
+      "name": "CHUMBO",
+      "preco": 40,
+      "frete": 5,
+      "icms": 18,
+      "nf": 100,
+      "tipoFornecedor": "0",
+      "total": 34.8,
+      "unid": "KG"
     }
   ],
   "listaOperacoes": [
@@ -47,28 +58,22 @@
       "name": "MONTAGEM",
       "unid": "HR",
       "id": 2
-    },
-    {
-      "id": 3,
-      "name": "CRINA ANIMAL",
-      "unid": "KG",
-      "valor": 85
     }
   ],
-  "markUps": [
+  "listaMarkUps": [
     {
+      "id": 1,
       "name": "SEM SUBSTITUIÇÃO TRIBUTÁRIA",
       "impostos": 13,
-      "adm": 6,
       "comissao": 8.7,
+      "adm": 6,
       "frete": 8,
       "financeiro": 4,
       "marketing": 2,
       "promotores": 2,
       "bonificacoes": 2,
       "lucro": 15,
-      "coeficiente": 2.54,
-      "id": 1
+      "coeficiente": 2.54
     }
   ]
 }

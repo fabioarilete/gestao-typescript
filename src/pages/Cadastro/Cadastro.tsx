@@ -18,7 +18,7 @@ export const Cadastro = () => {
         <S.ItensEdicao>
           <LinkButton to="/materiaPrima" text="Materiais" />
           <LinkButton to="/listaOperacoes" text="Operações" />
-          <LinkButton to="/listaMarkUps" text="Mark Up" />
+          <LinkButton to="/listaMarkUps" text="Mark Ups" />
         </S.ItensEdicao>
       </S.Container>
     </>

@@ -1,6 +1,5 @@
 import * as S from './style';
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs';
-import formatCurrency from '../../utils/formatCurrency';
 
 type Props = {
   name: string;
@@ -14,7 +13,7 @@ type Props = {
   bonificacoes: number;
   lucro: number;
   coeficiente: number;
-  id: number;
+  id: string;
   handleRemove(id: string): void;
 };
 
@@ -45,15 +44,48 @@ export const CardMarkUps = ({
         </S.ContainerTitle>
         <S.ContainerInfo>
           <S.Container20>
-            <S.Span>Valor:</S.Span>
-            <S.P>
-              {formatCurrency(valor, 'BRL')} {unid}
-            </S.P>
+            <S.Span>Impostos:</S.Span>
+            <S.P>{impostos}%</S.P>
           </S.Container20>
+          <S.Container20>
+            <S.Span>Comissão:</S.Span>
+            <S.P>{comissao}%</S.P>
+          </S.Container20>
+          <S.Container20>
+            <S.Span>Administração:</S.Span>
+            <S.P>{adm}%</S.P>
+          </S.Container20>
+          <S.Container20>
+            <S.Span>Frete:</S.Span>
+            <S.P>{frete}%</S.P>
+          </S.Container20>
+          <S.Container20>
+            <S.Span>Financeiro:</S.Span>
+            <S.P>{financeiro}%</S.P>
+          </S.Container20>
+          <S.Container20>
+            <S.Span>Marketing:</S.Span>
+            <S.P>{marketing}%</S.P>
+          </S.Container20>
+          <S.Container20>
+            <S.Span>Promotores:</S.Span>
+            <S.P>{promotores}%</S.P>
+          </S.Container20>
+          <S.Container20>
+            <S.Span>Bonificações:</S.Span>
+            <S.P>{bonificacoes}%</S.P>
+          </S.Container20>
+          <S.Container20>
+            <S.Span>Lucro:</S.Span>
+            <S.P>{lucro}%</S.P>
+          </S.Container20>
+          <S.ContainerCoef>
+            <S.Span>Coeficiente:</S.Span>
+            <S.P>{coeficiente}</S.P>
+          </S.ContainerCoef>
         </S.ContainerInfo>
         <S.ContainerActions>
-          {' '}
-          <S.ButtonEdit href={`listaOperacoes/${id}`}>
+          <S.ButtonEdit href={`listaMarkUps/${id}`}>
             <BsPencil /> Editar
           </S.ButtonEdit>
           <S.ButtonRemove onClick={handleRemoveClick}>

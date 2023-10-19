@@ -1,39 +1,17 @@
 import * as S from './style';
 import { Input } from '../../Form/Input';
 import { SubmitButton } from '../../Form/SubmitButton';
-import React, { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { Dispatch, SetStateAction, useMemo } from 'react';
+import { MarkUpTypes } from '../MarkUp/types/MarkUpTypes';
 
-interface FormState {
-  impostos: number;
-  name: string;
-  adm: number;
-  frete: number;
-  financeiro: number;
-  comissao: number;
-  marketing: number;
-  bonificacoes: number;
-  promotores: number;
-  lucro: number;
+interface FormMarkUpsProps {
+  markUp: MarkUpTypes;
+  setMarkUp: Dispatch<SetStateAction<MarkUpTypes>>;
+  handleSubmit(markUp: MarkUpTypes): void;
 }
 
-export const FormMarkUps = () => {
-  const [markUp, setMarkUp] = useState<FormState>({
-    name: '',
-    impostos: '' as any,
-    adm: '' as any,
-    comissao: '' as any,
-    frete: '' as any,
-    financeiro: '' as any,
-    marketing: '' as any,
-    promotores: '' as any,
-    bonificacoes: '' as any,
-    lucro: '' as any,
-  });
-
-  const navigate = useNavigate();
-
-  const coeficiente = useMemo(() => {
+export const FormMarkUps = ({ markUp, setMarkUp, handleSubmit }: FormMarkUpsProps) => {
+  const coef = useMemo(() => {
     const encargos =
       markUp.impostos +
       markUp.adm +
@@ -45,56 +23,19 @@ export const FormMarkUps = () => {
       markUp.bonificacoes +
       markUp.lucro;
 
-    const coef = 100 / (100 - encargos);
+    const coeficiente = 100 / (100 - encargos);
 
-    return parseFloat(coef.toFixed(2));
+    return parseFloat(coeficiente.toFixed(2));
   }, [markUp]);
 
-  function createPost() {
-    fetch('http://localhost:5000/markUps', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ ...markUp, coeficiente }),
-    })
-      .then(res => res.json())
-      .then(data => {
-        navigate('/listaMarkUps', {
-          state: { message: 'Mark Up cadastrado com sucesso!' },
-        });
-      })
-      .catch(e => console.log(e));
-  }
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function _handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const { name, impostos, comissao, adm, frete, marketing, promotores, financeiro, bonificacoes, lucro } = markUp;
-
-    if (
-      !name ||
-      !impostos ||
-      !comissao ||
-      !adm ||
-      !frete ||
-      !financeiro ||
-      !marketing ||
-      !promotores ||
-      !bonificacoes ||
-      !lucro
-    ) {
-      window.alert('Preencha todos os campos!');
-      return;
-    }
-
-    createPost();
-
-    window.alert('Sucesso!');
+    handleSubmit({ ...markUp, coeficiente: coef });
   }
 
   return (
     <S.Container>
-      <S.FormMarkUps onSubmit={handleSubmit}>
+      <S.FormMarkUps onSubmit={_handleSubmit}>
         <S.Title>Cadastro de Mark Ups</S.Title>
 
         <Input

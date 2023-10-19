@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom';
 import { CardMateriais } from '../CardMateriais';
 import { Message } from '../../components/Message';
 import Loading from '../../components/Loading';
-import { Button } from '@mui/material';
 
 export const Materiais = () => {
   const [materiais, setMateriais] = useState<any[]>([]);
