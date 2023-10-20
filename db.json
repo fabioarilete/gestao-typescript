@@ -44,6 +44,17 @@
       "tipoFornecedor": "0",
       "total": 34.8,
       "unid": "KG"
+    },
+    {
+      "id": 7,
+      "name": "TESTE",
+      "preco": 7.8,
+      "frete": 5,
+      "icms": 18,
+      "nf": 100,
+      "tipoFornecedor": "1",
+      "total": 6.786,
+      "unid": "UN"
     }
   ],
   "listaOperacoes": [

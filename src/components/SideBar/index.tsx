@@ -13,8 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
-import imagem from '../../img/logo São Francisco.png';
-import { Rowing } from '@mui/icons-material';
+import logo from '../../img/logosf.png';
 
 const drawerWidth = 240;
 
@@ -112,7 +111,7 @@ export default function SideBar() {
         open={open}
       >
         <a href="/">
-          <img className="img" src={imagem} alt="" />
+          <img className="img" src={logo} alt="" />
         </a>
 
         <DrawerHeader>
@@ -123,11 +122,11 @@ export default function SideBar() {
         <Divider />
         <List className="links">
           <ListItemButton href="/">Home</ListItemButton>
-          <ListItemButton href="/novoCusto">Novo Custo</ListItemButton>
-          <ListItemButton href="/custos">Custos</ListItemButton>
+          <ListItemButton href="/produtos">Custos</ListItemButton>
           <ListItemButton href="/materiaPrima">Matéria-Prima</ListItemButton>
           <ListItemButton href="/listaOperacoes">Operações</ListItemButton>
           <ListItemButton href="/listaMarkUps">Mark Ups</ListItemButton>
+          <ListItemButton href="/relatorios">Relatórios</ListItemButton>
         </List>
       </Drawer>
       <Main open={open}>

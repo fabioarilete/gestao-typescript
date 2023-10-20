@@ -6,7 +6,8 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  margin: auto;
+  padding-bottom: 120;
 `;
 
 export const H1 = styled.h1`

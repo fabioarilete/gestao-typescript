@@ -63,7 +63,6 @@ export const CadastroMarkUps = () => {
   return (
     <S.Container>
       <S.ContainerMarkUp>
-        <S.Title></S.Title>
         <FormMarkUps markUp={markUp} setMarkUp={setMarkUp} handleSubmit={handleSubmit} />
       </S.ContainerMarkUp>
     </S.Container>

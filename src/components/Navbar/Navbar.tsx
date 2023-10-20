@@ -1,6 +1,5 @@
 import * as S from './Navbar.styled';
 import { Link } from 'react-router-dom';
-import logo from '../../img/logo São Francisco.png';
 
 console.log(typeof Link);
 
@@ -8,7 +7,7 @@ export const Navbar = () => {
   return (
     <S.Container>
       <S.Link href="/">
-        <S.Img src={logo} alt="São Francisco" />
+        <S.Img src="../../img/logo São Francisco.png" alt="São Francisco" />
       </S.Link>
       <S.Ul>
         <S.Li>

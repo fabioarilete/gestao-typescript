@@ -45,7 +45,6 @@ export const CadastroOperacoes = () => {
   return (
     <S.Container>
       <S.ContainerCadastro>
-        <S.Title></S.Title>
         <FormOperacoes operacao={operacao} setOperacao={setOperacao} handleSubmit={handleSubmit} />
       </S.ContainerCadastro>
     </S.Container>

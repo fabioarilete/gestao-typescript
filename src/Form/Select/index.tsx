@@ -13,6 +13,7 @@ export const Select: FC<InputProps> = ({ name, label, ...rest }) => {
         <option>Selecione uma opção</option>
         <option>UN</option>
         <option>KG</option>
+        <option>CX</option>
         <option>PCT</option>
         <option>HR</option>
         <option>LT</option>

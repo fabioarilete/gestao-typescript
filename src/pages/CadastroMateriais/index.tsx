@@ -51,7 +51,6 @@ export const CadastroMateriais = () => {
   return (
     <S.Container>
       <S.ContainerCadastro>
-        <S.Title></S.Title>
         <FormMateriais material={material} setMaterial={setMaterial} handleSubmit={handleSubmit} />
       </S.ContainerCadastro>
     </S.Container>

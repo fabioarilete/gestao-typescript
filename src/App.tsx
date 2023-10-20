@@ -13,6 +13,8 @@ import { Material } from './pages/Material';
 import { Operacao } from './pages/Operacao';
 import { MarkUp } from './pages/MarkUp';
 import { MarkUps } from './pages/MarkUps';
+import { CadastroCustos } from './pages/CadasroCustos';
+import { Custos } from './pages/Custos';
 
 const App = () => {
   return (
@@ -23,14 +25,16 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/materiais" element={<CadastroMateriais />} />
-          <Route path="/operacoes" element={<CadastroOperacoes />} />
-          <Route path="/markUps" element={<CadastroMarkUps />} />
           <Route path="/materiaPrima" element={<Materiais />} />
           <Route path="/materiaPrima/:id" element={<Material />} />
+          <Route path="/operacoes" element={<CadastroOperacoes />} />
           <Route path="/listaOperacoes" element={<Operacoes />} />
           <Route path="/listaOperacoes/:id" element={<Operacao />} />
+          <Route path="/markUps" element={<CadastroMarkUps />} />
           <Route path="/listaMarkUps" element={<MarkUps />} />
           <Route path="/listaMarkUps/:id" element={<MarkUp />} />
+          <Route path="/custos" element={<CadastroCustos />} />
+          <Route path="/produtos" element={<Custos />} />
         </Routes>
       </Container>
       <Footer />
