@@ -1,6 +1,6 @@
 {
-  "produtos": [],
-  "materiaPrima": [
+  "products": [],
+  "materialsList": [
     {
       "preco": 4.5,
       "name": "PP PRETO - GRANULADO",
@@ -57,34 +57,6 @@
       "unid": "UN"
     }
   ],
-  "listaOperacoes": [
-    {
-      "valor": 120,
-      "name": "INJETORA",
-      "unid": "HR",
-      "id": 1
-    },
-    {
-      "valor": 50,
-      "name": "MONTAGEM",
-      "unid": "HR",
-      "id": 2
-    }
-  ],
-  "listaMarkUps": [
-    {
-      "id": 1,
-      "name": "SEM SUBSTITUIÇÃO TRIBUTÁRIA",
-      "impostos": 13,
-      "comissao": 8.7,
-      "adm": 6,
-      "frete": 8,
-      "financeiro": 4,
-      "marketing": 2,
-      "promotores": 2,
-      "bonificacoes": 2,
-      "lucro": 15,
-      "coeficiente": 2.54
-    }
-  ]
+  "operationsList": [],
+  "markUpsList": []
 }

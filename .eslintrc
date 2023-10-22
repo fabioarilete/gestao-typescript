@@ -12,11 +12,13 @@
       "ecmaVersion": 11,
       "sourceType": "module"
     },
+
     "globals": {
       "NodeJS": "readonly",
       "ServiceWorkerGlobalScope": "readonly"
     },
     "plugins": ["react", "prettier", "react-hooks", "@typescript-eslint"],
+
     "rules": {
       "prettier/prettier": "error",
       "react-hooks/rules-of-hooks": "error",
